@@ -1,0 +1,15 @@
+@import "loading-animation-general";
+@import "main-area";
+
+.gallery-page {
+    height: 100vh;
+    @import "asset-urls";
+    background-image: $girl-on-the-cliff;
+    .picture-frame {
+        width: 100%;
+        margin-bottom: 40px;
+        img {
+            width: 100%;
+        }
+    }
+}

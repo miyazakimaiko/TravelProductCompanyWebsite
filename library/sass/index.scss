@@ -1,0 +1,96 @@
+@import "loading-animation-index-page";
+
+.home {
+    height: 100vh;
+    main {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .inner-container {
+        max-height: 194px;
+        height: 22vh;
+        min-height: 130px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .catch-copy {
+            @import "font";
+            font-family: $header-font;
+            letter-spacing: $l-font-spacing;
+            @import "colours-functions";
+            color: get-main-white-colour(1);
+            font-size: $l-font-size;
+        }
+        .company-logo {
+            max-height: 40px;
+            height: 40%;
+            max-width: 135px;
+            width: 30vw;
+            @import "asset-urls";
+            background-image: $company-logo;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .button-container {
+            max-width: 347px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            form {
+                max-width: 150px;
+                width: 45%;
+            }
+            @import "button-animation";
+        }
+    }
+}
+
+#slideshow {
+    z-index: -10;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    .slide-1 {
+        @import "asset-urls";
+        background-image: $girl-on-the-shore;
+        background-repeat: no-repeat;
+        background-position-x: 40%;
+        background-position-y: 75%;
+    }
+    .slide-2 {
+        @import "asset-urls";
+        background-image: $girl-with-the-dog;
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        background-position-y: 75%;
+    }
+    .slide-3 {
+        @import "asset-urls";
+        background-image: $girl-by-the-brook;
+        background-repeat: no-repeat;
+        background-position-x: 40%;
+        background-position-y: 75%;
+    }
+    .slide-4 {
+        #my_video {
+            position: fixed;
+            bottom: 0;
+            right: -400px;
+            min-width: 100%;
+            min-height: 100%;
+          }
+    }
+  }
+  
+  #slideshow > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }

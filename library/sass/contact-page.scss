@@ -1,0 +1,54 @@
+@import "loading-animation-contact-page";
+@import "main-area";
+
+.contact-page {
+    height: 100vh;
+    @import "asset-urls";
+    background-image: $girl-by-the-brook;
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        label {
+            @import "font";
+            font-size: $m-font-size;
+            font-family: $main-font;
+            line-height: 24px;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            margin-top: 18px;
+        }
+        input, textarea {
+            padding: 10px;
+            font-size: 16px;
+            display: flex !important;
+            justify-content: end;
+            @import "font";
+            font-family: $main-font;
+            @import "colours-functions";
+            color: get-main-white-colour(0.9);
+            background: transparent;
+            outline: none !important;
+            transition: all 0.3s ease;
+            border-top: transparent;
+            border-right: transparent;
+            border-bottom: 2px solid get-main-white-colour();
+            border-left: 2px solid get-main-white-colour();
+            transition: all 0.3s ease;
+        }
+        .text-input {
+            &:focus {
+                @import "colours-functions";
+                background: get-main-white-colour(0.2) !important;
+            }
+        }
+        .submit-btn {
+            margin-top: 30px;
+            width: fit-content;
+            cursor: pointer;
+            &:hover {
+                @import "colours-functions";
+                background: get-main-white-colour(0.2) !important;
+            }
+        }
+    }
+}

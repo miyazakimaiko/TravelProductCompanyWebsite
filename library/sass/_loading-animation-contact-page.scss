@@ -1,0 +1,54 @@
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #E2E2E5;
+    backdrop-filter: blur(5px);
+	z-index: 9999999;
+	text-align:center;
+	color:#fff;
+}
+
+#splash-logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@import "font";
+    font-size: $m-font-size;
+    font-family: $main-font;
+    letter-spacing: 1px;
+}
+/*========= 画面遷移のためのCSS ===============*/
+
+body{
+    background:#E2E2E5;/*遷移アニメーションと同じ色を指定*/
+}
+
+body.appear{
+    background:#E2E2E5;/*画面を開いた後の背景色を指定*/
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay:0.2s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}

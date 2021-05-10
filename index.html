@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel - Irish Travel Product Company</title>
+    <link rel="stylesheet" href="./library/css/index.css">
+    <link rel="stylesheet" href="./library/css/common.css">
+</head>
+
+<body>
+    <div id="splash">
+        <div id="splash-logo">Loading...</div>
+    </div>
+    <div class="splashbg"></div>
+
+    <div id="container" class="home">
+        <header class="main">
+            <a href="/index.html">
+                <h1><img class="logo" src="/assets/logo/logo.png" alt="Travel"></h1>        
+            </a>
+            <div class="menu-wrapper">
+                <div class="menu-icon" onclick="this.classList.toggle('hover');SlideIn(0)">
+                    <div class="menu-bar menu-bar1"></div>
+                    <div class="menu-bar menu-bar2"></div>
+                    <div class="menu-bar menu-bar3"></div>
+                </div>
+            </div>
+        </header>
+        <nav id="nav-screen">
+            <ul>
+                <li class="menu-link"></li>
+                <li class="menu-link"><a href="/index.html"><p>HOME</p></a></li>
+                <li class="menu-link"><a href="/about.html"><p>ABOUT</p></a></li>
+                <li class="menu-link"><a href="/gallery.html"><p>GALLERY</p></a></li>
+                <li class="menu-link"><a href="/contact.html"><p>CONTACT</p></a></li>
+            </ul>
+        </nav>
+        <div class="index-nav-background" id="nav-screen-background"></div>
+        <div id="slideshow" onload="StartSlider(0)">
+            <div class="slide-4 slide">
+                <video height="100%" autoplay muted loop id="my_video">
+                    <source src="/assets/mp4/adventure.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slide-1 slide"></div>
+            <div class="slide-2 slide"></div>
+            <div class="slide-3 slide"></div>
+        </div>
+        <main>
+            <div class="inner-container">
+                <div class="company-logo"></div>
+                <h1 class=catch-copy>THINK DIFFERENT</h1>
+                <div class="button-container">
+                    <form>
+                        <label class="custom-btn-label" for="about-btn"><input type="button" class="custom-btn about-btn" onclick="window.location.href='/about.html';" value="About"></label>
+                    </form>
+                    <form>
+                        <label class="custom-btn-label" for="gallery-btn"><input type="button" class="custom-btn gallery-btn" onclick="window.location.href='/gallery.html';" value="Gallery"></label>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="./library/js/loading-animation.js"></script>
+    <script src="./library/js/scripts.js"></script>
+    <script src="./library/js/slideshow.js"></script>
+</body>
+</html>

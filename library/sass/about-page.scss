@@ -1,0 +1,8 @@
+@import "loading-animation-general";
+@import "main-area";
+
+.about-page {
+    height: 100vh;
+    @import "asset-urls";
+    background-image: $girl-on-the-cliff;
+}

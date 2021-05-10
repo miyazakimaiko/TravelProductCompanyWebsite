@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel - Irish Travel Product Company</title>
+    <link rel="stylesheet" href="./library/css/common.css">
+    <link rel="stylesheet" href="./library/css/contact-page.css">
+</head>
+
+
+<body>
+    <div id="splash">
+        <div id="splash-logo">Loading...</div>
+    </div>
+
+    <div id="container" class="contact-page">
+        <header>
+            <a href="/index.html">
+                <h1><img class="logo" src="/assets/logo/logo.png" alt="Travel"></h1>        
+            </a>
+            <div class="menu-wrapper">
+                <div class="menu-icon" onclick="this.classList.toggle('hover');SlideIn(0)">
+                    <div class="menu-bar menu-bar1"></div>
+                    <div class="menu-bar menu-bar2"></div>
+                    <div class="menu-bar menu-bar3"></div>
+                </div>
+            </div>
+        </header>
+        <nav id="nav-screen">
+            <ul>
+                <li class="menu-link"></li>
+                <li class="menu-link"><a href="/index.html"><p>HOME</p></a></li>
+                <li class="menu-link"><a href="/about.html"><p>ABOUT</p></a></li>
+                <li class="menu-link"><a href="/gallery.html"><p>GALLERY</p></a></li>
+                <li class="menu-link"><a href="/contact.html"><p>CONTACT</p></a></li>
+            </ul>
+        </nav>
+        <div class="" id="nav-screen-background"></div>
+        <!--background here?-->
+        <main>
+            <div class="inner-screen-container">
+                <section>
+                    <h1>CONTACT</h1>
+                </section>
+                <article>
+                    <form action="" class="contact-form">
+                        <label for="fname">First Name</label>
+                        <input required type="text" class="text-input" id="fname" name="firstname" pattern="[a-zA-Z0-9]+" title="Only uppercase/lowercase letters and numbers are accepted in this field." />
+                    
+                        <label for="lname">Last Name</label>
+                        <input required type="text" class="text-input" id="lname" name="lastname" pattern="[a-zA-Z0-9]+"  title="Only uppercase/lowercase letters and numbers are accepted in this field." />
+                    
+                        <label for="number">Phone Number</label>
+                        <input required type="text" class="text-input" id="number" name="phonenumber" pattern="[0-9]+" title="Only numbers are accepted in this field." />
+
+                        <label for="email">Email Address</label>
+                        <input required type="email" class="text-input" id="email" name="email" />
+                    
+                        <label for="feedback">Feedback</label>
+                        <textarea required id="feedback" class="text-input" name="subject" style="height:100px"></textarea>
+                    
+                        <input type="submit" class="submit-btn" id="submit" value="Submit"/>
+                    </form>
+                </article>    
+            </div>
+        </main>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="./library/js/loading-animation.js"></script>
+    <script src="./library/js/scripts.js"></script>
+</body>
+

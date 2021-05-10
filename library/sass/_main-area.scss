@@ -1,0 +1,60 @@
+main {
+    position: fixed;
+    top: 54px;
+    height: 100vh;
+    width: 100vw;
+    .inner-screen-container {
+        position: relative;
+        height: 85%;
+        margin: 50px 40px;
+        overflow: scroll;
+        @import "colours-functions";
+        color: get-main-white-colour(0.9);
+        @import "font";
+        section {
+            h1 {
+                position: relative;
+                width: fit-content;
+                font-size: $l-font-size;
+                font-family: $header-font;
+                font-weight: 300;
+                letter-spacing: $l-font-spacing;
+                &:after {
+                    // This is the divider line under h1
+                    position: absolute;
+                    content: "";
+                    z-index: -1;
+                    left: 0;
+                    right: 0;
+                    bottom: -40px;
+                    height: 2px;
+                    background: get-main-white-colour();
+                    transition: all 0.3s ease;
+                }
+            }
+            .divider-line {
+                width: 100%;
+                height: 1px;
+                @import "colours-functions";
+                background-color: get-main-white-colour(0.9);
+            }
+        }
+        article {
+            position: absolute;
+            top: 110px;
+            left: 0;
+            right: 0;
+            height: fit-content;
+            p {
+                font-size: $m-font-size;
+                font-family: $main-font;
+                line-height: 24px;
+                letter-spacing: 1px;
+                margin-bottom: 26px;
+                &:last-child {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
