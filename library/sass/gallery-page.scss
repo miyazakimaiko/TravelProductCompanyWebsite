@@ -1,15 +1,30 @@
 @import "loading-animation-general";
 @import "main-area";
 
+.gallery-article {
+    text-align: center;
+}
+
 .gallery-page {
     height: 100vh;
     @import "asset-urls";
     background-image: $girl-on-the-cliff;
     .picture-frame {
-        width: 100%;
         margin-bottom: 40px;
+        transition: all 0.3s ease;
+        display: inline-block;
+        vertical-align: bottom;
         img {
             width: 100%;
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 80vw;
+        }
+        &:hover {
+            transition: all 0.3s ease;
+            transform: scale(1.04);
+            box-shadow: 0 30px 30px -25px #000
         }
     }
 }
