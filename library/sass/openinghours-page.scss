@@ -1,0 +1,59 @@
+@import "loading-animation-general";
+@import "main-area";
+
+.openinghours-page {
+    height: 100vh;
+    @import "asset-urls";
+    background-image: $girl-on-the-cliff;
+}
+
+.opening-hours-article {
+    display: flex;
+    justify-content: center;
+}
+
+.openinghours-table {
+    tbody {
+        display: flex;
+        flex-direction: column;
+        // flex-direction: row in tablet resolution;
+        padding-left: 100px;
+        tr {
+            display: flex;
+        }
+        .weekday-header {
+            display: none;
+        }
+        .shop-column {
+            flex-direction: column;
+            margin-bottom: 50px;
+            .shop-location {
+                padding-bottom: 20px;
+                text-align: right;
+            }
+            td {
+                z-index: 1;
+                position: relative;
+                text-align: right;
+                transition: all 0.3s ease;
+                &:before {
+                    z-index: 0;
+                    content: attr(data-day);
+                    position: absolute;
+                    left: -100px;
+                    right: 0;
+                    text-align: left;
+                    transition: all 0.3s ease;
+                }
+                &:nth-child(odd):before {
+                    @import "colours-functions";
+                    background-color: get-main-white-colour(0.2);
+                }
+                &:hover {
+                    transition: all 0.3s ease;
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}

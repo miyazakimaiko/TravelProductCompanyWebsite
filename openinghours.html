@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel - Irish Travel Product Company</title>
+    <link rel="stylesheet" href="./library/css/common.css">
+    <link rel="stylesheet" href="./library/css/openinghours-page.css">
+</head>
+
+
+<body>
+    <div id="splash">
+        <div id="splash-logo">Loading...</div>
+    </div>
+
+    <div id="container" class="openinghours-page">
+        <header>
+            <a href="/index.html">
+                <h1><img class="logo" src="/assets/logo/logo.png" alt="Travel"></h1>        
+            </a>
+            <div class="menu-wrapper">
+                <div class="menu-icon" onclick="this.classList.toggle('hover');SlideIn(0)">
+                    <div class="menu-bar menu-bar1"></div>
+                    <div class="menu-bar menu-bar2"></div>
+                    <div class="menu-bar menu-bar3"></div>
+                </div>
+            </div>
+        </header>
+        <nav id="nav-screen">
+            <ul>
+                <li class="menu-link"></li>
+                <li class="menu-link"><a href="/index.html"><p>HOME</p></a></li>
+                <li class="menu-link"><a href="/about.html"><p>ABOUT</p></a></li>
+                <li class="menu-link"><a href="/gallery.html"><p>GALLERY</p></a></li>
+                <li class="menu-link"><a href="/openinghours.html"><p>Opening Hours</p></a></li>
+                <li class="menu-link"><a href="/contact.html"><p>CONTACT</p></a></li>
+            </ul>
+        </nav>
+        <div class="" id="nav-screen-background"></div>
+        <!--background here?-->
+        <main>
+            <div class="inner-screen-container">
+                <section>
+                    <h1>Opening Hours</h1>
+                </section>
+                <article class="opening-hours-article">
+                    <table class="openinghours-table">
+                        <tbody>
+                            <tr class="weekday-header">
+                                <th scope="col">Day</th>
+                                <th scope="col">Monday</th>
+                                <th scope="col">Tuesday</th>
+                                <th scope="col">Wednesday</th>
+                                <th scope="col">Thursday</th>
+                                <th scope="col">Friday</th>
+                                <th scope="col">Saturday</th>
+                                <th scope="col">Sunday</th>
+                                <th scope="col">Bank Holiday</th>
+                            </tr>
+                            <tr class="shop-column">
+                                <th class="shop-location">Liffey Street, Dublin</th>
+                                <td data-day="Monday">9:00 - 17:00</td>
+                                <td data-day="Tuesday">9:00 - 17:00</td>
+                                <td data-day="Wednesday">9:00 - 17:00</td>
+                                <td data-day="Thursday">9:00 - 17:00</td>
+                                <td data-day="Friday">9:00 - 17:00</td>
+                                <td data-day="Saturday">Closed</td>
+                                <td data-day="Sunday">Closed</td>
+                                <td data-day="Bank Holiday">Closed</td>
+                            </tr>
+                            <tr class="shop-column">
+                                <th class="shop-location">Paul Street, Cork</th>
+                                <td data-day="Monday">9:00 - 17:00</td>
+                                <td data-day="Tuesday">9:00 - 17:00</td>
+                                <td data-day="Wednesday">9:00 - 17:00</td>
+                                <td data-day="Thursday">9:00 - 17:00</td>
+                                <td data-day="Friday">9:00 - 17:00</td>
+                                <td data-day="Saturday">Closed</td>
+                                <td data-day="Sunday">Closed</td>
+                                <td data-day="Bank Holiday">Closed</td>
+                            </tr>
+                            <tr class="shop-column">
+                                <th class="shop-location">Bray, Wicklow</th>
+                                <td data-day="Monday">9:00 - 17:00</td>
+                                <td data-day="Tuesday">9:00 - 17:00</td>
+                                <td data-day="Wednesday">9:00 - 17:00</td>
+                                <td data-day="Thursday">9:00 - 17:00</td>
+                                <td data-day="Friday">9:00 - 17:00</td>
+                                <td data-day="Saturday">Closed</td>
+                                <td data-day="Sunday">Closed</td>
+                                <td data-day="Bank Holiday">Closed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>    
+            </div>
+        </main>  
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="./library/js/loading-animation.js"></script>
+    <script src="./library/js/nav-animation.js"></script>
+</body>
+
