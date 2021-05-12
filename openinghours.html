@@ -18,7 +18,7 @@
     <div id="container" class="openinghours-page">
         <header>
             <a href="/index.html">
-                <h1><img class="logo" src="/assets/logo/logo.png" alt="Travel"></h1>        
+                <h1><div class="logo"></div></h1>        
             </a>
             <div class="menu-wrapper">
                 <div class="menu-icon" onclick="this.classList.toggle('hover');SlideIn(0)">
@@ -34,12 +34,18 @@
                 <li class="menu-link"><a href="/index.html"><p>HOME</p></a></li>
                 <li class="menu-link"><a href="/about.html"><p>ABOUT</p></a></li>
                 <li class="menu-link"><a href="/gallery.html"><p>GALLERY</p></a></li>
-                <li class="menu-link"><a href="/openinghours.html"><p>Opening Hours</p></a></li>
+                <li class="menu-link"><a href="/openinghours.html"><p>OPENING HOURS</p></a></li>
                 <li class="menu-link"><a href="/contact.html"><p>CONTACT</p></a></li>
             </ul>
         </nav>
-        <div class="" id="nav-screen-background"></div>
-        <!--background here?-->
+
+        <!--The main background image on mobile - tablet size screens-->
+        <!--It is treated as a regular image on desktop size screens-->
+        <div class="image-1 sm-main-background"></div>
+
+        <!--Make the background image blurry on Desktop size screens-->
+        <div id="background-blurred-overlay"></div>
+        
         <main>
             <div class="inner-screen-container">
                 <section>
@@ -61,35 +67,35 @@
                             </tr>
                             <tr class="shop-column">
                                 <th class="shop-location">Liffey Street, Dublin</th>
-                                <td data-day="Monday">9:00 - 17:00</td>
-                                <td data-day="Tuesday">9:00 - 17:00</td>
-                                <td data-day="Wednesday">9:00 - 17:00</td>
-                                <td data-day="Thursday">9:00 - 17:00</td>
-                                <td data-day="Friday">9:00 - 17:00</td>
-                                <td data-day="Saturday">Closed</td>
-                                <td data-day="Sunday">Closed</td>
+                                <td data-day="Mon">9:00 - 17:00</td>
+                                <td data-day="Tue">9:00 - 17:00</td>
+                                <td data-day="Wed">9:00 - 17:00</td>
+                                <td data-day="Thu">9:00 - 17:00</td>
+                                <td data-day="Fri">9:00 - 17:00</td>
+                                <td data-day="Sat">Closed</td>
+                                <td data-day="Sun">Closed</td>
                                 <td data-day="Bank Holiday">Closed</td>
                             </tr>
                             <tr class="shop-column">
                                 <th class="shop-location">Paul Street, Cork</th>
-                                <td data-day="Monday">9:00 - 17:00</td>
-                                <td data-day="Tuesday">9:00 - 17:00</td>
-                                <td data-day="Wednesday">9:00 - 17:00</td>
-                                <td data-day="Thursday">9:00 - 17:00</td>
-                                <td data-day="Friday">9:00 - 17:00</td>
-                                <td data-day="Saturday">Closed</td>
-                                <td data-day="Sunday">Closed</td>
+                                <td data-day="Mon">9:00 - 17:00</td>
+                                <td data-day="Tue">9:00 - 17:00</td>
+                                <td data-day="Wed">9:00 - 17:00</td>
+                                <td data-day="Thu">9:00 - 17:00</td>
+                                <td data-day="Fri">9:00 - 17:00</td>
+                                <td data-day="Sat">Closed</td>
+                                <td data-day="Sun">Closed</td>
                                 <td data-day="Bank Holiday">Closed</td>
                             </tr>
                             <tr class="shop-column">
                                 <th class="shop-location">Bray, Wicklow</th>
-                                <td data-day="Monday">9:00 - 17:00</td>
-                                <td data-day="Tuesday">9:00 - 17:00</td>
-                                <td data-day="Wednesday">9:00 - 17:00</td>
-                                <td data-day="Thursday">9:00 - 17:00</td>
-                                <td data-day="Friday">9:00 - 17:00</td>
-                                <td data-day="Saturday">Closed</td>
-                                <td data-day="Sunday">Closed</td>
+                                <td data-day="Mon">9:00 - 17:00</td>
+                                <td data-day="Tue">9:00 - 17:00</td>
+                                <td data-day="Wed">9:00 - 17:00</td>
+                                <td data-day="Thu">9:00 - 17:00</td>
+                                <td data-day="Fri">9:00 - 17:00</td>
+                                <td data-day="Sat">Closed</td>
+                                <td data-day="Sun">Closed</td>
                                 <td data-day="Bank Holiday">Closed</td>
                             </tr>
                         </tbody>
