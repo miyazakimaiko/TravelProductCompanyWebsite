@@ -15,7 +15,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	@import "font";
-    font-size: $m-font-size;
+    font-size: $s-font-size;
     font-family: $main-font;
     letter-spacing: 1px;
 }
@@ -38,7 +38,8 @@ body.appear .splashbg{
     top: 0;
 	left: 0;
     transform: scaleY(0);
-    background-color: #B7B6C0;/*伸びる背景色の設定*/
+	@import "colours";
+    background-color: rgba(255, 255, 255, 0.575);/*伸びる背景色の設定*/
 	animation-name:PageAnime;
 	animation-duration:1.2s;
 	animation-timing-function:ease-in-out;

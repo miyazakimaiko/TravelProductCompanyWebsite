@@ -1,0 +1,29 @@
+// Small devices (Smartphone)
+@import "screen-size-definitions";
+
+@mixin sm {
+    @media (min-width: $screen-sm-min) {
+        @content;
+    }
+ }
+ 
+ // Medium devices (Tablet)
+ @mixin md {
+    @media (min-width: $screen-md-min) {
+        @content;
+    }
+ }
+ 
+ // Large devices (Laptop)
+ @mixin lg {
+    @media (min-width: $screen-lg-min) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices (Desktop)
+ @mixin xl {
+    @media (min-width: $screen-xl-min) {
+        @content;
+    }
+ }

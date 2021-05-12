@@ -1,15 +1,37 @@
+@import "screen-size-mixins";
+@import "screen-size-mixins";
+
 header {
     z-index: 100;
     position: fixed;
     display: flex;
     width: 100%;
     height: 54px;
-    h1 {
-        width: fit-content;
+
+    @include xl {
+        height: 85px;
     }
-    .logo {
-        height: 30px;
+
+    a {
         padding: 12px;
+
+        @include xl {
+            padding: 20px;
+        }
+    }
+
+    .logo {
+        @import "asset-urls";
+        background-image: $company-logo-white;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 70px;
+        height: 30px;
+
+        @include xl {
+            width: 102px;
+            height: 45px;
+        }
     }
 }
 
@@ -23,21 +45,48 @@ header {
     transform:scale(0.8);
     padding: 0;
     cursor: pointer;
-    z-index:20
+    z-index:20;
+
+    @include xl {
+        width: 55px;
+        height: 44px;
+        margin: 20px 25px;
+
+        top: 5px;
+    }
 }
 
 .menu-bar {
     width: 30px;
     height: 3px;
-    @import "colours-functions";
+    @import "colours";
     background: get-main-white-colour(1);
     position: absolute;
     transition: all 0.3s;
+    @include xl {
+        width: 55px;
+        height: 3px;
+    }
 }
 
-.menu-bar1 {margin-top: 4px}
-.menu-bar2 {margin-top: 15px}
-.menu-bar3 {margin-top: 26px}
+.menu-bar1 {
+    margin-top: 4px;
+    @include xl {
+        margin-top: 0px;
+    }
+}
+.menu-bar2 {
+    margin-top: 15px;
+    @include lg {
+        margin-top: 21px;
+    }
+}
+.menu-bar3 {
+    margin-top: 26px;
+    @include lg {
+        margin-top: 40px;
+    }
+}
 
 .menu-icon.hover{
     .menu-bar1 {

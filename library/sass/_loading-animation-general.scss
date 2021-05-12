@@ -16,18 +16,19 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
     @import "font";
-    font-size: $m-font-size;
+    font-size: $s-font-size;
     font-family: $main-font;
     letter-spacing: 1px;
 }
 /*========= 画面遷移のためのCSS ===============*/
 
+@import "colours";
 body{
-    background:#DAD4D2;/*遷移アニメーションと同じ色を指定*/
+    background:$main-gray-colour;/*遷移アニメーションと同じ色を指定*/
 }
 
 body.appear{
-    background:#DAD4D2;/*画面を開いた後の背景色を指定*/
+    background:$main-gray-colour;/*画面を開いた後の背景色を指定*/
 }
 
 /*画面遷移の後現れるコンテンツ設定*/
