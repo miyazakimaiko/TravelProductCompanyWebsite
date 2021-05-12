@@ -5,3 +5,6 @@
 @function get-main-white-colour($alpha: 0.6) {
     @return rgba(255, 255, 255, $alpha)
 }
+
+$main-gray-colour: #c1b6b2;
+$sub-gray-colour: #B7B6C0;
