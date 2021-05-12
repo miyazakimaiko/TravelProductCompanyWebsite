@@ -18,7 +18,7 @@
     <div id="container" class="gallery-page">
         <header>
             <a href="/index.html">
-                <h1><img class="logo" src="/assets/logo/logo.png" alt="Travel"></h1>        
+                <h1><div class="logo"></div></h1>        
             </a>
             <div class="menu-wrapper">
                 <div class="menu-icon" onclick="this.classList.toggle('hover');SlideIn(0)">
@@ -38,8 +38,14 @@
                 <li class="menu-link"><a href="/contact.html"><p>CONTACT</p></a></li>
             </ul>
         </nav>
-        <div class="" id="nav-screen-background"></div>
-        <!--background here?-->
+
+        <!--The main background image on mobile - tablet size screens-->
+        <!--It is treated as a regular image on desktop size screens-->
+        <div class="image-1 sm-main-background"></div>
+
+        <!--Make the background image blurry on Desktop size screens-->
+        <div id="background-blurred-overlay"></div>
+
         <main>
             <div class="inner-screen-container">
                 <section>
