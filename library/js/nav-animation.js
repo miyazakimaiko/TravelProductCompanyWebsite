@@ -20,13 +20,9 @@ function SlideIn(n) {
 function showBackground(){
   var navScreen = document.getElementById("nav-screen");
   navScreen.style.display = "block";
-  var elem = document.getElementById("nav-screen-background");
-  elem.classList.toggle("background-fade");
 }
 
 function hideBackground(){
-  var elem = document.getElementById("nav-screen-background");
-  elem.classList.toggle("background-fade");
   setTimeout(displayNone, 1000)
 
   function displayNone() {
@@ -38,14 +34,14 @@ function hideBackground(){
 function SlideInMenuLink(n) {
   var elem = document.getElementsByClassName("menu-link")[n];
   var pos = -1 * window.innerWidth - n * 100;
-  var id = setInterval(frame, 3);
+  var id = setInterval(frame, 2);
 
   function frame() {
     if (pos >= -10) {
       clearInterval(id);
       elem.style.right = 0 + 'px';
     } else {
-      pos += 10;
+      pos += 15;
       elem.style.right = pos + 'px';
     }
   }
@@ -54,7 +50,7 @@ function SlideInMenuLink(n) {
 function SlideOutMenuLink(n) {
   var elems = document.getElementsByClassName("menu-link")[n];
   var poss = 0;
-  var ids = setInterval(frames, 3);
+  var ids = setInterval(frames, 2);
 
   function frames() {
     if (poss <= -1 * window.innerWidth) {
