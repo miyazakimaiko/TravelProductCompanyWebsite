@@ -3,3 +3,9 @@
 @import "header";
 
 @import "navigation";
+
+body {
+    @import "colours";
+    background-color: $main-gray-colour;
+    overflow: hidden;
+}

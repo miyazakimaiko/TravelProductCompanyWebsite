@@ -1,3 +1,4 @@
+@import "screen-size-mixins";
 @import "loading-animation-index-page";
 
 .home {
@@ -8,6 +9,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include xl {
+            align-items: flex-end;
+            justify-content: left;
+        }
     }
     .inner-container {
         max-height: 194px;
@@ -17,13 +23,21 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @include xl {
+            max-height: none;
+            height: 30vh;
+            margin-left: 60px;
+            margin-bottom: 25vh;
+        }
+
         .catch-copy {
             @import "font";
             font-family: $header-font;
             letter-spacing: $l-font-spacing;
-            @import "colours-functions";
+            @import "colours";
             color: get-main-white-colour(1);
-            font-size: $l-font-size;
+            font-size: $catch-copy-font-size;
         }
         .company-logo {
             max-height: 40px;
@@ -31,9 +45,13 @@
             max-width: 135px;
             width: 30vw;
             @import "asset-urls";
-            background-image: $company-logo;
+            background-image: $company-logo-white;
             background-repeat: no-repeat;
             background-size: contain;
+
+            @include xl {
+                max-height: 50px;
+            }
         }
         .button-container {
             max-width: 347px;
@@ -54,7 +72,19 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+
+    @include xl {
+        top: 170px;
+        left: 170px;
+    }
+
+    .slide {
+        @include xl {
+            background-size: cover;
+        }
+    }
+
     .slide-1 {
         @import "asset-urls";
         background-image: $girl-on-the-shore;
@@ -78,11 +108,16 @@
     }
     .slide-4 {
         #my_video {
-            position: fixed;
-            bottom: 0;
-            right: -400px;
+            // set the video centered
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /* % of current element */
+
+            height: 100%;
+            width: 190vh; /* 100 * 1.90 / 1 (1.9:1 = video size ratio) */
             min-width: 100%;
-            min-height: 100%;
+            min-height: 52.8vw; /* 100 * 1 / 1.90 (1.9:1 = video size ratio) */
           }
     }
   }
