@@ -1,16 +1,40 @@
-@import "loading-animation-contact-page";
+@import "screen-size-mixins";
+@import "loading-animation-general";
 @import "main-area";
 
 .contact-page {
-    height: 100vh;
-    @import "asset-urls";
-    background-image: $girl-by-the-brook;
+    position: relative;
+    .image-1 {
+        position: relative;
+        z-index: -10;
+
+        height: 100vh;
+        @import "asset-urls";
+        background-image: $girl-by-the-brook;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include xl {
+            width: 100%;
+            right: -70%;
+            top: 20vh;
+            background-position: unset;
+        }
+    }
+    }
+
+    #background-blurred-overlay {
+        @include xl {
+            display: none;
+        }
+    }
+
     .contact-form {
         display: flex;
         flex-direction: column;
         label {
             @import "font";
-            font-size: $m-font-size;
+            font-size: $s-font-size;
             font-family: $main-font;
             line-height: 24px;
             letter-spacing: 1px;
@@ -24,7 +48,7 @@
             justify-content: end;
             @import "font";
             font-family: $main-font;
-            @import "colours-functions";
+            @import "colours";
             color: get-main-white-colour(0.9);
             background: transparent;
             outline: none !important;
@@ -37,7 +61,7 @@
         }
         .text-input {
             &:focus {
-                @import "colours-functions";
+                @import "colours";
                 background: get-main-white-colour(0.2) !important;
             }
         }
@@ -46,7 +70,7 @@
             width: fit-content;
             cursor: pointer;
             &:hover {
-                @import "colours-functions";
+                @import "colours";
                 background: get-main-white-colour(0.2) !important;
             }
         }

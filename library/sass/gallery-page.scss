@@ -7,8 +7,17 @@
 
 .gallery-page {
     height: 100vh;
-    @import "asset-urls";
-    background-image: $girl-on-the-cliff;
+
+    .image-1 {
+        position: relative;
+        z-index: -10;
+
+        height: 100vh;
+        @import "asset-urls";
+        background-image: $girl-on-the-cliff;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
     .picture-frame {
         margin-bottom: 40px;
         transition: all 0.3s ease;

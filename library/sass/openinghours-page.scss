@@ -1,10 +1,31 @@
+@import "screen-size-mixins";
 @import "loading-animation-general";
 @import "main-area";
 
 .openinghours-page {
-    height: 100vh;
-    @import "asset-urls";
-    background-image: $girl-on-the-cliff;
+    position: relative;
+    .image-1 {
+        position: relative;
+        z-index: -10;
+
+        height: 100vh;
+        @import "asset-urls";
+        background-image: $girl-on-the-cliff;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include xl {
+            width: 100%;
+            right: -60%;
+            top: 20vh;
+        }
+    }
+
+    #background-blurred-overlay {
+        @include xl {
+            display: none;
+        }
+    }
 }
 
 .opening-hours-article {
@@ -13,6 +34,7 @@
 }
 
 .openinghours-table {
+    margin: 0 20px;
     tbody {
         display: flex;
         flex-direction: column;
@@ -46,7 +68,7 @@
                     transition: all 0.3s ease;
                 }
                 &:nth-child(odd):before {
-                    @import "colours-functions";
+                    @import "colours";
                     background-color: get-main-white-colour(0.2);
                 }
                 &:hover {
