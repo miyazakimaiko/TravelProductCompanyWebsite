@@ -1,8 +1,52 @@
+@import "screen-size-mixins";
+
+.foreground-container {
+    position: relative;
+
+    .image-container {
+        position: relative;
+        z-index: -10;
+        @include xl {
+            display: flex;
+            justify-content: flex-end;
+
+            height: 40vh;
+            top: 140px;
+            left: 0;
+        }
+    }
+    .image-1 {
+        height: 100vh;
+        @import "asset-urls";
+        //background-image: $girl-on-the-cliff;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include xl {
+            height: 100%;
+            width: 85vw;
+            right: -60%;
+        }
+    }
+
+    #background-blurred-overlay {
+        @include xl {
+            display: none;
+        }
+    }
+}
+
 main {
     position: fixed;
     top: 54px;
     height: 100vh;
     width: 100vw;
+
+    @include xl {
+        top: 140px;
+    }
+
     .inner-screen-container {
         position: relative;
         height: 85%;
@@ -11,26 +55,25 @@ main {
         @import "colours";
         color: get-main-white-colour(0.9);
         @import "font";
+
+        @include xl {
+            padding-top: 30vh;
+        }
+
         section {
+
             h1 {
                 position: relative;
                 width: fit-content;
-                font-size: $m-font-size;
+                font-size: $header-font-size-sm;
                 font-family: $header-font;
                 font-weight: 300;
                 letter-spacing: $l-font-spacing;
-                &:after {
-                    // This is the divider line under h1
-                    display: none;
-                    position: absolute;
-                    content: "";
-                    z-index: -1;
-                    left: 0;
-                    right: 0;
-                    bottom: -40px;
-                    height: 2px;
-                    background: get-main-white-colour();
-                    transition: all 0.3s ease;
+
+                @include xl {
+                    font-size: $header-font-size-xl;
+                    font-weight: 600;
+                    letter-spacing: 25px;
                 }
             }
             .divider-line {
@@ -46,6 +89,21 @@ main {
             left: 0;
             right: 0;
             height: fit-content;
+
+            @include xl {
+                display: flex;
+                justify-content: center;
+                top: 40%;
+                width: 100%;
+            }
+
+            .article-contents {
+                @include xl {
+                    width: 70%;
+                    backdrop-filter: blur(10px);
+                }
+            }
+
             p {
                 font-size: $s-font-size;
                 font-family: $main-font;
