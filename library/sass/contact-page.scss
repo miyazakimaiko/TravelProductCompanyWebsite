@@ -3,30 +3,9 @@
 @import "main-area";
 
 .contact-page {
-    position: relative;
     .image-1 {
-        position: relative;
-        z-index: -10;
-
-        height: 100vh;
         @import "asset-urls";
-        background-image: $girl-by-the-brook;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        @include xl {
-            width: 100%;
-            right: -70%;
-            top: 20vh;
-            background-position: unset;
-        }
-    }
-    }
-
-    #background-blurred-overlay {
-        @include xl {
-            display: none;
-        }
+        background-image: $girl-on-the-shore;
     }
 
     .contact-form {

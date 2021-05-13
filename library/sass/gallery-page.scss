@@ -1,34 +1,46 @@
+@import "screen-size-mixins";
 @import "loading-animation-general";
 @import "main-area";
 
-.gallery-article {
-    text-align: center;
+.image-1 {
+    @import "asset-urls";
+    background-image: $girl-on-the-cliff;
 }
 
 .gallery-page {
-    height: 100vh;
 
-    .image-1 {
-        position: relative;
-        z-index: -10;
+    .gallery-article {
+        text-align: center;
+    
+        @include xl {
+            padding: 100px 0;
 
-        height: 100vh;
-        @import "asset-urls";
-        background-image: $girl-on-the-cliff;
-        background-position: center;
-        background-repeat: no-repeat;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+    
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
     }
+
     .picture-frame {
         margin-bottom: 40px;
         transition: all 0.3s ease;
         display: inline-block;
         vertical-align: bottom;
+
+        @include xl {
+            width: 27%;
+        }
+
         img {
             width: 100%;
             display: block;
-            width: auto;
             height: auto;
             max-width: 80vw;
+
         }
         &:hover {
             transition: all 0.3s ease;
