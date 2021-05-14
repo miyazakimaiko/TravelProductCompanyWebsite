@@ -55,28 +55,31 @@
                 </section>
                 <article>
                     <form action="" class="contact-form">
-                        <label for="fname">First Name</label>
-                        <input required type="text" class="text-input" id="fname" name="firstname" pattern="[a-zA-Z0-9]+" title="Only uppercase/lowercase letters and numbers are accepted in this field." />
-                    
-                        <label for="lname">Last Name</label>
-                        <input required type="text" class="text-input" id="lname" name="lastname" pattern="[a-zA-Z0-9]+"  title="Only uppercase/lowercase letters and numbers are accepted in this field." />
-                    
-                        <label for="number">Phone Number</label>
-                        <input required type="text" class="text-input" id="number" name="phonenumber" pattern="[0-9]+" title="Only numbers are accepted in this field." />
+                        <div>
+                            <div class="input-wrapper"><label for="fname">First Name</label>
+                            <input required type="text" class="sm-input" id="fname" name="firstname" pattern="[a-zA-Z0-9]+" title="Only uppercase/lowercase letters and numbers are accepted in this field." /></div>
 
-                        <label for="email">Email Address</label>
-                        <input required type="email" class="text-input" id="email" name="email" />
-                    
-                        <label for="feedback">Feedback</label>
-                        <textarea required id="feedback" class="text-input" name="subject" style="height:100px"></textarea>
-                    
-                        <input type="submit" class="submit-btn" id="submit" value="Submit"/>
+                            <div class="input-wrapper"><label for="lname">Last Name</label>
+                            <input required type="text" class="sm-input" id="lname" name="lastname" pattern="[a-zA-Z0-9]+"  title="Only uppercase/lowercase letters and numbers are accepted in this field." /></div>
+
+                            <div class="input-wrapper"><label for="number">Phone Number</label>
+                            <input required type="text" class="sm-input" id="number" name="phonenumber" pattern="[0-9]+" title="Only numbers are accepted in this field." /></div>
+                            
+                            <div class="input-wrapper"><label for="email">Email Address</label>
+                            <input required type="email" class="sm-input" id="email" name="email" /></div>
+                        </div>
+                        <div>
+                            <div class="feedback-wrapper"><label for="feedback">Feedback</label>
+                            <textarea required id="feedback" class="lg-input" name="subject"></textarea></div>
+                        
+                            <div class="button-wrapper"><input type="submit" class="submit-btn" id="submit" value="Submit"/></div>
+                        </div>
                     </form>
                 </article>    
             </div>
         </main>
     </div>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="./library/js/jquery-3.6.0.min.js"></script>
     <script src="./library/js/loading-animation.js"></script>
     <script src="./library/js/nav-animation.js"></script>
 </body>
