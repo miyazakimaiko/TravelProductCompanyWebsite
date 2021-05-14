@@ -1,4 +1,5 @@
 @import "screen-size-mixins";
+@import "font";
 
 .foreground-container {
     position: relative;
@@ -10,7 +11,7 @@
             display: flex;
             justify-content: flex-end;
 
-            height: 40vh;
+            height: 30vh;
             top: 140px;
             left: 0;
         }
@@ -27,6 +28,7 @@
             height: 100%;
             width: 85vw;
             right: -60%;
+            border-radius: 69% 31% 71% 29% / 58% 69% 31% 42%;
         }
     }
 
@@ -44,20 +46,21 @@ main {
     width: 100vw;
 
     @include xl {
-        top: 140px;
+        top: 90px;
     }
 
     .inner-screen-container {
         position: relative;
         height: 85%;
         margin: 20px 5vw;
-        overflow: scroll;
         @import "colours";
         color: get-main-white-colour(0.9);
-        @import "font";
 
-        @include xl {
-            padding-top: 30vh;
+        overflow-y: scroll;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
         }
 
         section {
@@ -65,6 +68,7 @@ main {
             h1 {
                 position: relative;
                 width: fit-content;
+
                 font-size: $header-font-size-sm;
                 font-family: $header-font;
                 font-weight: 300;
@@ -74,6 +78,8 @@ main {
                     font-size: $header-font-size-xl;
                     font-weight: 600;
                     letter-spacing: 25px;
+
+                    margin-top: 16vh;
                 }
             }
             .divider-line {
@@ -93,11 +99,13 @@ main {
             @include xl {
                 display: flex;
                 justify-content: center;
-                top: 40%;
+                top: 47%;
                 width: 100%;
             }
 
             .article-contents {
+                padding-bottom: 10vh;
+
                 @include xl {
                     width: 70%;
                     backdrop-filter: blur(10px);
