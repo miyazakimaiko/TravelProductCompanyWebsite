@@ -3,5 +3,6 @@
 @import "main-area";
 
 .image-1 {
+    @import "asset-urls";
     background-image: $girl-on-the-cliff;
 }
