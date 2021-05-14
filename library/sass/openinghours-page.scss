@@ -1,10 +1,11 @@
 @import "screen-size-mixins";
 @import "loading-animation-general";
 @import "main-area";
+@import "colours";
 
 .image-1 {
     @import "asset-urls";
-    background-image: $girl-on-the-cliff;
+    background-image: $girl-with-autumn-trees;
 }
 
 .opening-hours-article {
@@ -13,17 +14,61 @@
 }
 
 .openinghours-table {
+    backdrop-filter: blur(10px);
     margin: 0 20px;
     tbody {
         display: flex;
         flex-direction: column;
         // flex-direction: row in tablet resolution;
         padding-left: 100px;
+
+        @include xl {
+            flex-direction: row;
+            padding-left: 0;
+            width: 800px;
+            justify-content: space-around;
+        }
+
         tr {
             display: flex;
         }
+
+        th, td {
+            @include xl {
+                padding: 15px 0;
+            }
+        }
+
         .weekday-header {
             display: none;
+            .day-header {
+                padding-bottom: 20px;
+            }
+
+            @include xl {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .day {
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 765px;
+                    background-color: transparent;
+                }
+                &:nth-child(odd):before {
+                    background-color: get-main-white-colour(0.2);
+                }
+                &:hover::before {
+                    background-color: get-bg-gray-colour(0.2);
+                }
+            }
         }
         .shop-column {
             flex-direction: column;
@@ -45,14 +90,19 @@
                     right: 0;
                     text-align: left;
                     transition: all 0.3s ease;
+
+                    @include xl {
+                        display: none;
+                    }
                 }
                 &:nth-child(odd):before {
-                    @import "colours";
                     background-color: get-main-white-colour(0.2);
+                    @include xl {
+                        display: none;
+                    }
                 }
-                &:hover {
-                    transition: all 0.3s ease;
-                    transform: scale(1.05);
+                &:hover:before {
+                    background-color: get-bg-gray-colour(0.2);
                 }
             }
         }
