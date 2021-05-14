@@ -32,8 +32,7 @@
 
 @import "colours";
 .menu-link {
-    margin-bottom: 2px;
-    background-color: rgba(41,41,41, 0.4);
+    margin-bottom: 6px;
     backdrop-filter: blur(5px);
     flex-grow: 1;
     flex-basis: 0;
@@ -42,6 +41,8 @@
     position: relative;
     right: -100%;
     transition: all 0.5s;
+    border-bottom: 2px solid get-main-white-colour();
+    border-left: 2px solid get-main-white-colour();
 
     a {
         height: 54px;
@@ -49,6 +50,7 @@
         display: -ms-flexbox;
         display: flex;
         text-decoration: none;
+        padding-left: 10%;
 
         @include xl {
             height: 80px;
@@ -56,7 +58,6 @@
     }
     @import "font";
     p {
-        padding-left: 50px;
         align-self: center;
         color: white;
         font-size: 16px;
