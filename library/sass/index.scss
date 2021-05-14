@@ -75,8 +75,17 @@
     overflow: hidden;
 
     @include xl {
-        top: 170px;
+        top: 130px;
         left: 170px;
+        border-radius: 50% 100% 50% 35% / 50% 40% 60% 100%;
+    }
+
+    #my_video {
+        display: none;
+        
+        @include lg {
+            display: block;
+        }
     }
 
     .slide {
