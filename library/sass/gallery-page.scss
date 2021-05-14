@@ -4,7 +4,7 @@
 
 .image-1 {
     @import "asset-urls";
-    background-image: $girl-on-the-cliff;
+    background-image: $girl-by-the-brook;
 }
 
 .gallery-page {
@@ -13,25 +13,30 @@
         text-align: center;
     
         @include xl {
+            border: 2px solid white;
+            width: fit-content;
             padding: 100px 0;
 
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-evenly;
             flex-wrap: wrap;
     
-            background-color: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
         }
     }
 
     .picture-frame {
+        margin: auto;
         margin-bottom: 40px;
+        width: fit-content;
         transition: all 0.3s ease;
-        display: inline-block;
+        display: flex;
         vertical-align: bottom;
+        border-radius: 5% 95% 5% 95% / 93% 5% 95% 7% ;
 
         @include xl {
+            margin: 0px 0px 80px 0px;
             width: 27%;
         }
 
@@ -40,12 +45,12 @@
             display: block;
             height: auto;
             max-width: 80vw;
-
+            border-radius: 5% 95% 5% 95% / 93% 5% 95% 7% ;
         }
         &:hover {
             transition: all 0.3s ease;
             transform: scale(1.04);
-            box-shadow: 0 30px 30px -25px #000
+            box-shadow: 0 30px 30px -25px #000;
         }
     }
 }
