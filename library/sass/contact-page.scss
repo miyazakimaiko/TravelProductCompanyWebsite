@@ -5,12 +5,34 @@
 .contact-page {
     .image-1 {
         @import "asset-urls";
-        background-image: $girl-on-the-shore;
+        background-image: $girl-with-the-dog;
     }
 
     .contact-form {
         display: flex;
         flex-direction: column;
+        backdrop-filter: blur(10px);
+
+        @include xl {
+            flex-direction: row;
+        }
+
+        .fullname-container {
+            @include xl {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+        }
+        .contact-number-container {
+            @include xl {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+        }
+        
+
         label {
             @import "font";
             font-size: $s-font-size;
@@ -37,20 +59,50 @@
             border-bottom: 2px solid get-main-white-colour();
             border-left: 2px solid get-main-white-colour();
             transition: all 0.3s ease;
-        }
-        .text-input {
+
             &:focus {
                 @import "colours";
                 background: get-main-white-colour(0.2) !important;
             }
         }
+        .input-wrapper {
+            margin-bottom: 20px;
+            @include xl {
+                margin-right: 20px; 
+            }
+        }
+        .feedback-wrapper {
+            margin-bottom: 20px;
+        }
+
+        .sm-input {
+            width: 100%;
+
+            @include xl {
+                width: 250px;
+            }
+        }
+        .lg-input {
+            width: 100%;
+            height: 30vh;
+            @include xl {
+                width: 700px;
+                height: 270px;
+            } 
+        }
+        .button-wrapper {
+            display: flex;
+            justify-content: flex-end;
+        }
         .submit-btn {
-            margin-top: 30px;
             width: fit-content;
             cursor: pointer;
             &:hover {
                 @import "colours";
                 background: get-main-white-colour(0.2) !important;
+            }
+            @include xl {
+                padding: 20px 40px;
             }
         }
     }
