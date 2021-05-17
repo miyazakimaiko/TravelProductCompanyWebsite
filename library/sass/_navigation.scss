@@ -11,7 +11,8 @@
     display: none;
 
     transition: all 0.4s;
-    background:#856a5d;
+    @import "colours";
+    background: $brown-colour;
 
 
     ul {
@@ -20,6 +21,7 @@
 }
 
 @import "colours";
+
 .menu-link {
     margin-bottom: 6px;
     backdrop-filter: blur(5px);
@@ -28,7 +30,6 @@
     display: flex;
     position: relative;
     left: 0;
-    transition: all 0.5s;
 
     a {
         height: 54px;
@@ -41,7 +42,7 @@
         }
     }
     @import "font";
-    p {
+    .menu-link-text {
         align-self: center;
         color: white;
         font-size: 36px;
@@ -49,10 +50,19 @@
         z-index: 3;
         cursor: pointer;
 
+        clip-path: inset(0 100% 0 0);
+        transition: 0.7s cubic-bezier(0.37, 0, 0.63, 1);
+        transition-property: clip-path;
+
         @include xl {
             font-size: 3vw;
         }
     }
+
+    .is-animated {
+        clip-path: inset(0) !important;
+    }
+
     p:before {
         content: "";
         display: block;
