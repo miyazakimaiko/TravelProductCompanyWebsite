@@ -33,6 +33,18 @@
     }
 
     #background-blurred-overlay {
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: all 0.4s;
+        background: rgba(0,0,0,0);
+        backdrop-filter: blur(15px);
+        opacity: 1;
+        transition: all 0.4s;
+        
         @include xl {
             display: none;
         }
