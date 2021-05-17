@@ -2,32 +2,21 @@
 
 #nav-screen {
     z-index: 99;
-    width: 50vw;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     flex-wrap: wrap;
     position: fixed;
-    top: 54px;
+    top: 0;
     right: 0;
     display: none;
 
-    @include xl {
-        width: 15vw;
-        top: 90px;
-    }
-}
+    transition: all 0.4s;
+    background:#856a5d;
 
-#background-blurred-overlay {
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    transition: all 0.4s;
-    background: rgba(0,0,0,0);
-    backdrop-filter: blur(15px);
-    opacity: 1;
-    transition: all 0.4s;
+
+    ul {
+        margin-top: 90px;
+    }
 }
 
 @import "colours";
@@ -36,18 +25,13 @@
     backdrop-filter: blur(5px);
     flex-grow: 1;
     flex-basis: 0;
-    flex-grow: 1;
     display: flex;
     position: relative;
-    right: -100%;
+    left: 0;
     transition: all 0.5s;
-    border-bottom: 2px solid get-main-white-colour();
-    border-left: 2px solid get-main-white-colour();
 
     a {
         height: 54px;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
         text-decoration: none;
         padding-left: 10%;
@@ -60,13 +44,13 @@
     p {
         align-self: center;
         color: white;
-        font-size: 16px;
-        font-family: $link-font;
+        font-size: 36px;
+        font-family: $header-font;
         z-index: 3;
         cursor: pointer;
 
         @include xl {
-            font-size: 21px;
+            font-size: 3vw;
         }
     }
     p:before {
