@@ -15,7 +15,7 @@ body {
         width: 2rem;
         height: 2rem;
         background-color: #856a5d;
-        opacity: .7;
+        opacity: 0.7;
         border-radius: 50%;
         position: absolute;
         z-index: 100;
@@ -26,7 +26,8 @@ body {
         transform-origin: 100% 100%;
     }
     .link-grow {
-        transform: scale(2);
+        transform: scale(2.5);
+        opacity: 0.4;
     }
     .whiten {
         background-color: $main-gray-colour;
