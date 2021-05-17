@@ -13,7 +13,6 @@
         text-align: center;
     
         @include xl {
-            border: 2px solid white;
             width: fit-content;
             padding: 100px 0;
 
@@ -33,11 +32,23 @@
         transition: all 0.3s ease;
         display: flex;
         vertical-align: bottom;
-        border-radius: 5% 95% 5% 95% / 93% 5% 95% 7% ;
+        position: relative;
 
         @include xl {
             margin: 0px 0px 80px 0px;
             width: 27%;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            top: -10px;
+            left: -10px;
+            @import "colours";
+            border: 2px solid get-main-white-colour(0.8);
+            transition: all 0.1s;
         }
 
         img {
@@ -45,12 +56,13 @@
             display: block;
             height: auto;
             max-width: 80vw;
-            border-radius: 5% 95% 5% 95% / 93% 5% 95% 7% ;
         }
         &:hover {
-            transition: all 0.3s ease;
-            transform: scale(1.04);
             box-shadow: 0 30px 30px -25px #000;
+            &:before {
+                top: 0;
+                left: 0;
+            }
         }
     }
 }
