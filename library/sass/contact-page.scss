@@ -15,6 +15,8 @@
 
         @include xl {
             flex-direction: row;
+            height: 50vh;
+            min-height: 330px;
         }
 
         .fullname-container {
@@ -31,7 +33,6 @@
                 flex-wrap: nowrap;
             }
         }
-        
 
         label {
             @import "font";
@@ -42,9 +43,10 @@
             margin-bottom: 5px;
             margin-top: 18px;
         }
+
         input, textarea {
-            padding: 10px;
-            font-size: 16px;
+            font-size: 22px;
+            line-height: 1.5;
             display: flex !important;
             justify-content: end;
             @import "font";
@@ -67,16 +69,23 @@
         }
         .input-wrapper {
             margin-bottom: 20px;
+
             @include xl {
                 margin-right: 20px; 
             }
         }
         .feedback-wrapper {
             margin-bottom: 20px;
+            height: 50vh;
+
+            @include xl {
+                height: 100%;
+            }
         }
 
         .sm-input {
             width: 100%;
+            height: 50px;
 
             @include xl {
                 width: 250px;
@@ -84,10 +93,11 @@
         }
         .lg-input {
             width: 100%;
-            height: 30vh;
+            height: 92%;
+
             @include xl {
                 width: 700px;
-                height: 270px;
+                //height: 270px;
             } 
         }
         .button-wrapper {
@@ -95,14 +105,13 @@
             justify-content: flex-end;
         }
         .submit-btn {
-            width: fit-content;
+            width: 120px;
+            height: 50px;
+            justify-content: center;
             cursor: pointer;
             &:hover {
                 @import "colours";
                 background: get-main-white-colour(0.2) !important;
-            }
-            @include xl {
-                padding: 20px 40px;
             }
         }
     }
