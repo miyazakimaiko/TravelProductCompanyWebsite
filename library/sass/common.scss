@@ -8,4 +8,27 @@ body {
     @import "colours";
     background-color: $main-gray-colour;
     overflow: hidden;
+    cursor: none;
+    position: relative;
+
+    .cursor {
+        width: 2rem;
+        height: 2rem;
+        background-color: #856a5d;
+        opacity: .7;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 100;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        transition: all 0.3s ease;
+        transition-property: background, transform;
+        transform-origin: 100% 100%;
+    }
+    .link-grow {
+        transform: scale(2);
+    }
+    .whiten {
+        background-color: $main-gray-colour;
+    }
 }
