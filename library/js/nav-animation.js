@@ -1,9 +1,10 @@
-var NavIsOpen = false;
+let NavIsOpen = false;
 
 function SlideIn(n) {
-  var i;
+  let i;
   if (NavIsOpen == false) {
     showBackground()
+    cursor.classList.add("whiten");
     for (i = n; i < 6; i++) {
       SlideInMenuLink(i)
     }
@@ -13,12 +14,13 @@ function SlideIn(n) {
       SlideOutMenuLink(i)
     }
     hideBackground()
+    cursor.classList.remove("whiten");
     NavIsOpen = false
   }
 }
 
 function showBackground(){
-  var navScreen = document.getElementById("nav-screen");
+  const navScreen = document.getElementById("nav-screen");
   navScreen.style.display = "block";
 }
 
@@ -26,15 +28,15 @@ function hideBackground(){
   setTimeout(displayNone, 1000)
 
   function displayNone() {
-    var navScreen = document.getElementById("nav-screen");
+    const navScreen = document.getElementById("nav-screen");
     navScreen.style.display = "none";
   }
 }
 
 function SlideInMenuLink(n) {
-  var elem = document.getElementsByClassName("menu-link")[n];
-  var pos = -1 * window.innerWidth - n * 100;
-  var id = setInterval(frame, 2);
+  let elem = document.getElementsByClassName("menu-link")[n];
+  let pos = -1 * window.innerWidth - n * 100;
+  let id = setInterval(frame, 2);
 
   function frame() {
     if (pos >= -10) {
@@ -48,9 +50,9 @@ function SlideInMenuLink(n) {
 }
 
 function SlideOutMenuLink(n) {
-  var elems = document.getElementsByClassName("menu-link")[n];
-  var poss = 0;
-  var ids = setInterval(frames, 2);
+  let elems = document.getElementsByClassName("menu-link")[n];
+  let poss = 0;
+  let ids = setInterval(frames, 2);
 
   function frames() {
     if (poss <= -1 * window.innerWidth) {
